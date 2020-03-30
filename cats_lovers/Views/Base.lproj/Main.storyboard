@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cats_lovers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-v9-KZ2">
+                                <rect key="frame" x="63" y="687" width="288" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" name="pink"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterNewScreenBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lX2-BY-KYH"/>
+                                    <segue destination="fkh-qu-zB4" kind="show" id="DmD-Uf-dbE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLR-Pt-d6t">
+                                <rect key="frame" x="137" y="190" width="141" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="62"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lovers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRF-8h-Hdy">
+                                <rect key="frame" x="159" y="258" width="111" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="purple"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundview" destination="8bC-Xf-vdC" id="heH-mf-b1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1580" y="-542"/>
+        </scene>
+        <!--Cats images-->
+        <scene sceneID="cE0-HB-LQu">
+            <objects>
+                <viewController id="ZWY-1m-Pxs" customClass="CatsViewController" customModule="cats_lovers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sG0-im-NNw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2rY-UY-gHM">
+                                <rect key="frame" x="20" y="56" width="374" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Qf-Mg-SUj">
+                                    <size key="itemSize" width="172" height="159"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="catsCell" id="2CN-nM-Oal" customClass="CatsCollectionViewCell" customModule="cats_lovers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="159"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4zm-xa-53O">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IZG-Sr-II4">
+                                                    <rect key="frame" x="8" y="8" width="156" height="143"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="156" id="4YV-JY-ON0"/>
+                                                        <constraint firstAttribute="height" constant="143" id="A2M-Ru-C9X"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IZG-Sr-II4" firstAttribute="centerY" secondItem="4zm-xa-53O" secondAttribute="centerY" id="Pap-lz-qD9"/>
+                                                <constraint firstItem="IZG-Sr-II4" firstAttribute="centerX" secondItem="4zm-xa-53O" secondAttribute="centerX" id="R3J-Zw-2Bm"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="172" height="159"/>
+                                        <connections>
+                                            <outlet property="catsImage" destination="IZG-Sr-II4" id="TtV-aP-buI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZWY-1m-Pxs" id="SZ9-F8-7Mt"/>
+                                    <outlet property="delegate" destination="ZWY-1m-Pxs" id="dR9-Ks-gsw"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2rY-UY-gHM" firstAttribute="leading" secondItem="d9W-h1-mSu" secondAttribute="leading" constant="20" id="NeE-uW-t1s"/>
+                            <constraint firstItem="2rY-UY-gHM" firstAttribute="bottom" secondItem="d9W-h1-mSu" secondAttribute="bottom" id="U0a-ip-Chb"/>
+                            <constraint firstItem="d9W-h1-mSu" firstAttribute="trailing" secondItem="2rY-UY-gHM" secondAttribute="trailing" constant="20" id="iyt-wQ-nat"/>
+                            <constraint firstItem="2rY-UY-gHM" firstAttribute="top" secondItem="d9W-h1-mSu" secondAttribute="top" id="vgL-pV-Q0v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d9W-h1-mSu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cats images" id="pyb-YK-KX6"/>
+                    <connections>
+                        <outlet property="catsCollectionView" destination="2rY-UY-gHM" id="UoK-Nn-Wpx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tp8-cj-J5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="-542.41071428571422"/>
+        </scene>
+        <!--Cats-->
+        <scene sceneID="NwR-e2-vXV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fkh-qu-zB4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Cats" id="M5h-eX-vjV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="byw-hs-yTZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZWY-1m-Pxs" kind="relationship" relationship="rootViewController" id="QDP-6t-cP9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqo-7j-kiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762.31884057971024" y="-542.41071428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="pink">
+            <color red="0.8901960784313725" green="0.16078431372549021" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.3411764705882353" green="0.16862745098039217" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

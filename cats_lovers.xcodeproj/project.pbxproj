@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		18D37D0B242EA4A0000D399F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D37D09242EA4A0000D399F /* Main.storyboard */; };
 		18D37D0D242EA4A3000D399F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D37D0C242EA4A3000D399F /* Assets.xcassets */; };
 		18D37D10242EA4A3000D399F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D37D0E242EA4A3000D399F /* LaunchScreen.storyboard */; };
+		18D37D1E24300241000D399F /* imgurApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37D1D24300241000D399F /* imgurApi.swift */; };
+		18D37D222430130E000D399F /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37D212430130E000D399F /* CatsViewController.swift */; };
+		18D37D242430F984000D399F /* CatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37D232430F984000D399F /* CatsCollectionViewCell.swift */; };
+		18D37D2624312159000D399F /* catsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D37D2524312159000D399F /* catsModel.swift */; };
+		761BE3F4329F0982E7754799 /* Pods_cats_lovers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D07A7EDF0B4D53B1BDA7AAFF /* Pods_cats_lovers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		18D37D0C242EA4A3000D399F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D37D0F242EA4A3000D399F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D37D11242EA4A3000D399F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D37D1D24300241000D399F /* imgurApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgurApi.swift; sourceTree = "<group>"; };
+		18D37D212430130E000D399F /* CatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsViewController.swift; sourceTree = "<group>"; };
+		18D37D232430F984000D399F /* CatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewCell.swift; sourceTree = "<group>"; };
+		18D37D2524312159000D399F /* catsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catsModel.swift; sourceTree = "<group>"; };
+		5C4ECB0945CECA8EBD1606E7 /* Pods-cats_lovers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cats_lovers.release.xcconfig"; path = "Target Support Files/Pods-cats_lovers/Pods-cats_lovers.release.xcconfig"; sourceTree = "<group>"; };
+		7CD58BB9EFC389929E36DDC7 /* Pods-cats_lovers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cats_lovers.debug.xcconfig"; path = "Target Support Files/Pods-cats_lovers/Pods-cats_lovers.debug.xcconfig"; sourceTree = "<group>"; };
+		D07A7EDF0B4D53B1BDA7AAFF /* Pods_cats_lovers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cats_lovers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761BE3F4329F0982E7754799 /* Pods_cats_lovers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137B856D1D4470B706B8F573 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CD58BB9EFC389929E36DDC7 /* Pods-cats_lovers.debug.xcconfig */,
+				5C4ECB0945CECA8EBD1606E7 /* Pods-cats_lovers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		18D37CF7242EA4A0000D399F = {
 			isa = PBXGroup;
 			children = (
 				18D37D02242EA4A0000D399F /* cats_lovers */,
 				18D37D01242EA4A0000D399F /* Products */,
+				137B856D1D4470B706B8F573 /* Pods */,
+				89CDA323D6FC79877942AAA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +80,59 @@
 		18D37D02242EA4A0000D399F /* cats_lovers */ = {
 			isa = PBXGroup;
 			children = (
-				18D37D03242EA4A0000D399F /* AppDelegate.swift */,
-				18D37D05242EA4A0000D399F /* SceneDelegate.swift */,
-				18D37D07242EA4A0000D399F /* ViewController.swift */,
-				18D37D09242EA4A0000D399F /* Main.storyboard */,
+				18D37D1A243001D5000D399F /* others */,
+				18D37D19242FFCD9000D399F /* Controllers */,
+				18D37D18242FFCC0000D399F /* Views */,
+				18D37D17242FFCB6000D399F /* Models */,
 				18D37D0C242EA4A3000D399F /* Assets.xcassets */,
-				18D37D0E242EA4A3000D399F /* LaunchScreen.storyboard */,
 				18D37D11242EA4A3000D399F /* Info.plist */,
 			);
 			path = cats_lovers;
+			sourceTree = "<group>";
+		};
+		18D37D17242FFCB6000D399F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18D37D2524312159000D399F /* catsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18D37D18242FFCC0000D399F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18D37D07242EA4A0000D399F /* ViewController.swift */,
+				18D37D212430130E000D399F /* CatsViewController.swift */,
+				18D37D09242EA4A0000D399F /* Main.storyboard */,
+				18D37D0E242EA4A3000D399F /* LaunchScreen.storyboard */,
+				18D37D232430F984000D399F /* CatsCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18D37D19242FFCD9000D399F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18D37D1D24300241000D399F /* imgurApi.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18D37D1A243001D5000D399F /* others */ = {
+			isa = PBXGroup;
+			children = (
+				18D37D03242EA4A0000D399F /* AppDelegate.swift */,
+				18D37D05242EA4A0000D399F /* SceneDelegate.swift */,
+			);
+			path = others;
+			sourceTree = "<group>";
+		};
+		89CDA323D6FC79877942AAA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D07A7EDF0B4D53B1BDA7AAFF /* Pods_cats_lovers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18D37D14242EA4A3000D399F /* Build configuration list for PBXNativeTarget "cats_lovers" */;
 			buildPhases = (
+				FC7D6B3C3860E1D63D5064F9 /* [CP] Check Pods Manifest.lock */,
 				18D37CFC242EA4A0000D399F /* Sources */,
 				18D37CFD242EA4A0000D399F /* Frameworks */,
 				18D37CFE242EA4A0000D399F /* Resources */,
+				B68776F79E9F7B4BE07E023C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +203,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B68776F79E9F7B4BE07E023C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cats_lovers/Pods-cats_lovers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cats_lovers/Pods-cats_lovers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cats_lovers/Pods-cats_lovers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7D6B3C3860E1D63D5064F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cats_lovers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18D37CFC242EA4A0000D399F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18D37D08242EA4A0000D399F /* ViewController.swift in Sources */,
+				18D37D222430130E000D399F /* CatsViewController.swift in Sources */,
 				18D37D04242EA4A0000D399F /* AppDelegate.swift in Sources */,
+				18D37D242430F984000D399F /* CatsCollectionViewCell.swift in Sources */,
+				18D37D2624312159000D399F /* catsModel.swift in Sources */,
 				18D37D06242EA4A0000D399F /* SceneDelegate.swift in Sources */,
+				18D37D1E24300241000D399F /* imgurApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +398,7 @@
 		};
 		18D37D15242EA4A3000D399F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD58BB9EFC389929E36DDC7 /* Pods-cats_lovers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +416,7 @@
 		};
 		18D37D16242EA4A3000D399F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C4ECB0945CECA8EBD1606E7 /* Pods-cats_lovers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
